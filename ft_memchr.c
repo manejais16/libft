@@ -37,7 +37,7 @@ int main (void)
 			printf("Test failed : ");
 			test_fail_flag = 1;
 		}
-		printf("Expeted \"%s\", got \"%s\"\n", expected, got);
+		printf("Expected \"%s\", got \"%s\"\n", expected, got);
 	}
 
 	if (test_fail_flag == 1)

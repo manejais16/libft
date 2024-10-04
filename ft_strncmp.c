@@ -39,7 +39,7 @@ int main (void)
 			printf("Test failed : ");
 			test_fail_flag = 1;
 		}
-		printf("Expeted \"%i\", got \"%i\"\n", expected, got);
+		printf("Expected \"%i\", got \"%i\"\n", expected, got);
 	}
 
 	if (test_fail_flag == 1)
