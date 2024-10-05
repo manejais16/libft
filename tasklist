@@ -5,7 +5,7 @@
 [x] ft_isprint.c > The is correct by definition.
 [x] ft_strlen.c > The string.h funcion crushes with NULL ptr.
 [x] ft_memset.c 
-[ ] ft_bzero.c
+[x] ft_bzero.c > A test must be written for it.
 [ ] ft_memcpy.c
 [ ] ft_memmove.c
 [ ] ft_strlcpy.c
