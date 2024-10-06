@@ -8,8 +8,8 @@
 [x] ft_bzero.c > A test must be written for it.
 [x] ft_memcpy.c > A test must be written for it & my undefined behaviour is not == to string.h undefined.
 [x] ft_memmove.c > More tests should be added 
-[ ] ft_strlcpy.c
-[ ] ft_strlcat.c
+[x] ft_strlcpy.c > More tests should be added
+[x] ft_strlcat.c > More tests should be added
 
 [x] ft_toupper.c
 [x] ft_tolower.c

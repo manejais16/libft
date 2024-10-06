@@ -1,12 +1,15 @@
-int ft_strlcpy(char *dst, const char *str, int size)
+int ft_strlcat(char *dst, const char *str, int size)
 {
 	int	count;
 
 	count = 0;
+	while (*dst)
+	{
+		count++;
+		dst++;
+	}
 	if (size == 0)
-		return (0);
-	if (str == 0)
-		return (0);
+		return (count);
 	while (size > 1 && *str != '\0')
 	{
 		*dst = *str;
@@ -24,6 +27,7 @@ int ft_strlcpy(char *dst, const char *str, int size)
 	return (count);
 }
 
+
 //Start of the Test
 #include <stdio.h>
 #include <string.h>
@@ -31,17 +35,17 @@ int ft_strlcpy(char *dst, const char *str, int size)
 int main (void)
 {
 	int test_fail_flag = 0;
-	char* test_str[] = {"hello", "hello", "", NULL, "hello", "hello"};
-    	size_t test_size[] = {10, 5, 10, 10, 3, 6};
-	char* test_expected[] = {"hello", "hell", "", "", "he", "hello"};
-	int test_expected_size[] = {5,5,0,0,5,5};
+	char test_dest1[][30] = {"hello", "hello", "", "hello", "hello", "hello"};
+	char test_str[][30] = {" world", " world is great", "hello", " world", "a", " world"};
+    	int test_size[] = {10, 5, 10, 10, 3, 6};
+	char* test_expected[] = {"hello world", "hello wor", "hello", "hello world", "helloa", "hello worl"};
+	int test_expected_size[] = {11, 20, 5, 11, 6, 11};
 	printf("Running the test...\n");
 	for (int i = 0; i < 6; i++)
 	{
-		char test_dest1[20], test_dest2[20];
-		int got = ft_strlcpy(test_dest1, test_str[i], test_size[i]);
+		int got = ft_strlcat(test_dest1[i], test_str[i], test_size[i]);
 		int expected = test_expected_size[i]; 
-		if (got == expected && !strcmp(test_dest1, test_expected[i]))
+		if (got == expected && !strcmp(test_dest1[i], test_expected[i]))
 			printf("Test passed : ");
 		else
 		{
