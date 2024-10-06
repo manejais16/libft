@@ -6,8 +6,8 @@
 [x] ft_strlen.c > The string.h funcion crushes with NULL ptr.
 [x] ft_memset.c 
 [x] ft_bzero.c > A test must be written for it.
-[ ] ft_memcpy.c > A test must be written for it.
-[ ] ft_memmove.c
+[x] ft_memcpy.c > A test must be written for it & my undefined behaviour is not == to string.h undefined.
+[x] ft_memmove.c > More tests should be added 
 [ ] ft_strlcpy.c
 [ ] ft_strlcat.c
 

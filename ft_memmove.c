@@ -4,6 +4,17 @@ void *ft_memcpy(void *to, const void *from, int numBytes)
 	void *temp;
 
 	temp = to;
+	if (from == to)
+		return (temp);
+	if ((from - to) < 0)
+	{
+		while (numBytes > 0)
+		{
+			numBytes--;
+			*(char *) (to + numBytes) = *(char *) (from + numBytes);
+		}
+		return (temp);
+	}
 	while (numBytes > 0)
 	{
 		*(char *) to = *(char *) from;
@@ -41,6 +52,23 @@ int main (void)
 		}
 		printf("Expected \"%s\", got \"%s\"\n", expected, got);
 	}
+	//Overlaping memory cases:
+	char ton[] = "abcdefghijklm";
+	char ton2[] = "abcdefghijklm";
+	for (int i = 1; i < 3; i++)
+	{
+		char *got = (char *) ft_memcpy((void *)ton + i*2, (const void *)ton, 5);
+		char *expected = (char *) memcpy((void *)ton2 + i*2, (const void *)ton2, 5);
+		if (!strcmp(got,expected))
+			printf("Test passed : ");
+		else
+		{
+			printf("Test failed : ");
+			test_fail_flag = 1;
+		}
+		printf("Expected \"%s\", got \"%s\"\n", expected, got);
+	}
+	
 
 	if (test_fail_flag == 1)
 		printf("TEST FAILED!");
