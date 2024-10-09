@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:53:58 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 13:14:27 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 18:12:49 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 #define MAX_INT 2147483647
 #define MIN_INT -2147483648

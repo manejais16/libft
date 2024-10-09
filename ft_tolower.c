@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:04:31 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 12:04:33 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:36:41 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_tolower(int ch)
 {

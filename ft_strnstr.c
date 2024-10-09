@@ -6,12 +6,13 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:32:31 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 12:34:59 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 18:21:20 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-static char	*ft_strchr(const char *str, int search_str, int *len_left);
-static int		ft_strcmp(const char *str1, const char *str2);
+static char		*ft_strchrx(const char *str, int search_str, int *len_left);
+static int		ft_strcmpx(const char *str1, const char *str2);
 
 char	*ft_strnstr(const char *big, const char *little, int len)
 {
@@ -21,18 +22,18 @@ char	*ft_strnstr(const char *big, const char *little, int len)
 		return (0);
 	if (*little == '\0')
 		return ((char *) big);
-	last_first_char_found = ft_strchr(big, *little, &len);
+	last_first_char_found = ft_strchrx(big, *little, &len);
 	while (last_first_char_found && len > 0)
 	{
-		if (ft_strcmp(last_first_char_found, little) == 0)
+		if (ft_strcmpx(last_first_char_found, little) == 0)
 			return (last_first_char_found);
 		big++;
-		last_first_char_found = ft_strchr(big, *little, &len);
+		last_first_char_found = ft_strchrx(big, *little, &len);
 	}
 	return (0);
 }
 
-static char	*ft_strchr(const char *str, int search_str, int *len_left)
+static char	*ft_strchrx(const char *str, int search_str, int *len_left)
 {
 	if (str == 0)
 		return (0);
@@ -46,7 +47,7 @@ static char	*ft_strchr(const char *str, int search_str, int *len_left)
 	return ((char *)str);
 }
 
-static int	ft_strcmp(const char *str1, const char *str2)
+static int	ft_strcmpx(const char *str1, const char *str2)
 {
 	while (*str1 != '\0' && *str2 != '\0')
 	{

@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:08:40 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 12:09:11 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:37:28 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int search_str)
 {

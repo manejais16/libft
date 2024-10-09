@@ -6,22 +6,23 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:50:54 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:51:29 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:27:37 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*ft_bzero(void *str, int n)
 {
-	void	*temp;
+	char	*str_temp;
 
-	temp = str;
+	str_temp = str;
 	while (n > 0)
 	{
-		*(char *)str = (char) 0;
+		*str_temp = (char) 0;
 		n--;
-		(char *)str++;
+		str_temp++;
 	}
-	return (temp);
+	return (str);
 }
 /*
 //Start of the Test

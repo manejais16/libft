@@ -6,34 +6,37 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:55:34 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:57:25 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:32:08 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-void	*ft_memcpy(void *to, const void *from, int numBytes)
+void	*ft_memmove(void *to, const void *from, int numBytes)
 {
-	void	*temp;
+	char		*to_temp;
+	const char	*from_temp;
 
-	temp = to;
+	to_temp = to;
+	from_temp = from;
 	if (from == to)
-		return (temp);
+		return (to);
 	if ((from - to) < 0)
 	{
 		while (numBytes > 0)
 		{
 			numBytes--;
-			*(char *)(to + numBytes) = *(char *)(from + numBytes);
+			*(to_temp + numBytes) = *(from_temp + numBytes);
 		}
-		return (temp);
+		return (to);
 	}
 	while (numBytes > 0)
 	{
-		*(char *) to = *(char *) from;
-		(char *)to++;
-		(char *)from++;
+		*to_temp = *from_temp;
+		to_temp++;
+		from_temp++;
 		numBytes--;
 	}
-	return (temp);
+	return (to);
 }
 
 /*
@@ -53,8 +56,8 @@ int main (void)
 	int len[] = {5, 0, 26, 5, 5, 9, 0};
 	for (int i = 0; i < 7; i++)
 	{
-		char *got = (char *) ft_memcpy((void *)to, (const void *)from[i], len[i]);
-		char *expected = (char *) memcpy((void *)to2, (const void *)from[i], len[i]);
+		char *got = (char *) ft_memmove((void *)to, (const void *)from[i], len[i]);
+		char *expected = (char *) memmove((void *)to2, (const void *)from[i], len[i]);
 		if (!strcmp(got,expected))
 			printf("Test passed : ");
 		else
@@ -69,8 +72,8 @@ int main (void)
 	char ton2[] = "abcdefghijklm";
 	for (int i = 1; i < 3; i++)
 	{
-		char *got = (char *) ft_memcpy((void *)ton + i*2, (const void *)ton, 5);
-		char *expected = (char *) memcpy((void *)ton2 + i*2, (const void *)ton2, 5);
+		char *got = (char *) ft_memmove((void *)ton + i*2, (const void *)ton, 5);
+		char *expected = (char *) memmove((void *)ton2 + i*2, (const void *)ton2, 5);
 		if (!strcmp(got,expected))
 			printf("Test passed : ");
 		else

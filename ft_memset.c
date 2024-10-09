@@ -6,28 +6,28 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:47:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:47:34 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 18:18:50 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, int n)
 {
-	void	*temp;
+	char	*str_temp;
 
-	temp = str;
+	str_temp = str;
 	while (n > 0)
 	{
-		*(char *)str = (char) c;
+		*str_temp = (char) c;
 		n--;
-		(char *)str = (char *)str + 1;
+		str_temp++;
 	}
-	return (temp);
+	return (str);
 }
 /*
 //Start of the Test
 #include <stdio.h>
 #include <string.h>
-
 
 int main (void)
 {

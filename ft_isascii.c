@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:25:05 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:26:13 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:21:43 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isascii(int ch)
 {

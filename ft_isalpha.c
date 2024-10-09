@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:08:33 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:17:51 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:19:08 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isalpha(int ch)
 {

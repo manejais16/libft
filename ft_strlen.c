@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:28:16 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:33:06 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 18:33:02 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 // The original strlen function does not check if a 
 // NULL pointer is given and it crashes!
@@ -18,8 +19,6 @@ int	ft_strlen(const char *str)
 	int	len;
 
 	len = 0;
-	if (str == 0)
-		return (0);
 	while (*str != '\0')
 	{
 		len++;

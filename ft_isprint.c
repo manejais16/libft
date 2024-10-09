@@ -6,13 +6,14 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:26:52 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:27:20 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 18:31:42 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isprint(int ch)
 {
-	if (ch >= 32 && ch <= 127)
+	if (ch >= 32 && ch <= 126)
 		return (1);
 	return (0);
 }

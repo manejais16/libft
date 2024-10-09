@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:27:42 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 12:27:43 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:41:21 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_memcmp(const char *str1, const char *str2, int num)
 {

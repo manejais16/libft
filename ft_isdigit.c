@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:18:29 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 11:20:31 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:09:09 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isdigit(int ch)
 {

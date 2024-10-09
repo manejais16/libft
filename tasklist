@@ -4,10 +4,10 @@
 [x] ft_isascii.c
 [x] ft_isprint.c > The is correct by definition.
 [x] ft_strlen.c > The string.h funcion crushes with NULL ptr.
-[ ] ft_memset.c > !!!!May have a error becaues the lvalue caseted and assigned and assigned at the same line.
-[ ] ft_bzero.c > !!!!A test must be written for it.
-[ ] ft_memcpy.c > !!!!A test must be written for it & my undefined behaviour is not == to string.h undefined.
-[ ] ft_memmove.c > !!!!More tests should be added 
+[x] ft_memset.c > !!!!May have a error becaues the lvalue caseted and assigned and assigned at the same line.
+[x] ft_bzero.c > !!!!A test must be written for it.
+[x] ft_memcpy.c > !!!!A test must be written for it & my undefined behaviour is not == to string.h undefined.
+[x] ft_memmove.c > !!!!More tests should be added 
 [x] ft_strlcpy.c > More tests should be added
 [x] ft_strlcat.c > !!!! More tests should be added
 

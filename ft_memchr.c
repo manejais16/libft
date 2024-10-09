@@ -6,9 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:16:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 12:17:05 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/09 17:40:39 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 //By the definition the c should only be max unsigned char,
 //but the string.h function does allow multi-character const!
