@@ -1,19 +1,29 @@
-#include <stdio.h>
-void *ft_bzero (void *str, int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 11:50:54 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 11:51:29 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	*ft_bzero(void *str, int n)
 {
-	void *temp;
+	void	*temp;
 
 	temp = str;
 	while (n > 0)
 	{
-		 *(char *)str = (char) 0; 
+		*(char *)str = (char) 0;
 		n--;
 		(char *)str++;
 	}
 	return (temp);
 }
-
-
+/*
 //Start of the Test
 #include <stdio.h>
 #include <string.h>
@@ -30,7 +40,8 @@ int main (void)
 	char inputs5[] = "hello\0world";
 	char inputs6[] = "hello café";
 	char inputs7[] = "hello";
-	char *test_str[] = {inputs1, inputs2, inputs3, inputs4, inputs5, inputs6, inputs7};
+	char *test_str[] = {inputs1, inputs2, inputs3, inputs4,\
+   	inputs5, inputs6, inputs7};
 	char inputs1s[] = "hello";
 	char inputs2s[] = "";
 	char inputs3s[] = "abcdefghijklmnopqrstuvwxyz";
@@ -38,7 +49,8 @@ int main (void)
 	char inputs5s[] = "hello\0world";
 	char inputs6s[] = "hello café";
 	char inputs7s[] = "hello";
-	char *test_strs[] = {inputs1s, inputs2s, inputs3s, inputs4s, inputs5s, inputs6s, inputs7s};
+	char *test_strs[] = {inputs1s, inputs2s, inputs3s, inputs4s,\
+   	inputs5s, inputs6s, inputs7s};
 	int len[] = {5, 0, 26, 5, 5, 9, 0};
 	//for (int i = 0; i < 7; i++)
 	//{
@@ -61,3 +73,4 @@ int main (void)
 
 	return (0);
 }
+*/

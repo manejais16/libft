@@ -1,9 +1,21 @@
-char *ft_strchr(const char *str, int search_str, int *len_left);
-int ft_strcmp (const char *str1, const char *str2);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 12:32:31 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 12:34:59 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strnstr(const char *big, const char *little, int len)
+static char	*ft_strchr(const char *str, int search_str, int *len_left);
+static int		ft_strcmp(const char *str1, const char *str2);
+
+char	*ft_strnstr(const char *big, const char *little, int len)
 {
-	char *last_first_char_found;
+	char	*last_first_char_found;
 
 	if (len == 0)
 		return (0);
@@ -20,7 +32,7 @@ char *ft_strnstr(const char *big, const char *little, int len)
 	return (0);
 }
 
-char *ft_strchr(const char *str, int search_str, int *len_left)
+static char	*ft_strchr(const char *str, int search_str, int *len_left)
 {
 	if (str == 0)
 		return (0);
@@ -34,12 +46,12 @@ char *ft_strchr(const char *str, int search_str, int *len_left)
 	return ((char *)str);
 }
 
-int ft_strcmp (const char *str1, const char *str2)
+static int	ft_strcmp(const char *str1, const char *str2)
 {
 	while (*str1 != '\0' && *str2 != '\0')
 	{
 		if (*str1 != *str2)
-			break;
+			break ;
 		str1++;
 		str2++;
 	}
@@ -50,7 +62,7 @@ int ft_strcmp (const char *str1, const char *str2)
 	else
 		return (-1);
 }
-
+/*
 //Start of the Test
 #include <stdio.h>
 #include <string.h>
@@ -59,10 +71,13 @@ int main (void)
 {
 	int test_fail_flag = 0;
 	printf("Running the test...\n");
-	char *test_str[] = {"hello world", "hello world", "hello world", "", "hello world", "hello world", "hello world", "hello world"};
-	char *needle[] = {"world", "foo", "", "world", "hello world", "hello", "world", "world"};
+	char *test_str[] = {"hello world", "hello world", "hello world",\
+   	"", "hello world", "hello world", "hello world", "hello world"};
+	char *needle[] = {"world", "foo", "", "world", "hello world",\
+   	"hello", "world", "world"};
 	int comp_len[] = {11, 11, 11, 0, 11, 11, 11, 5};
-	char *expect_results[] = {"world", 0, "hello world", 0, "hello world", "hello world", "world", 0};
+	char *expect_results[] = {"world", 0, "hello world", 0, "hello world",\
+   	"hello world", "world", 0};
 	for (int i = 0; i < 8; i++)
 	{
 		char *got = ft_strnstr(test_str[i], needle[i], comp_len[i]);
@@ -89,3 +104,4 @@ int main (void)
 
 	return (0);
 }
+*/

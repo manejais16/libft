@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 11:28:16 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 11:33:06 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // The original strlen function does not check if a 
 // NULL pointer is given and it crashes!
 // ft_strlen(NULL) == 0;
@@ -15,8 +27,7 @@ int	ft_strlen(const char *str)
 	}
 	return (len);
 }
-
-//Start of the Test
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -24,7 +35,8 @@ int main (void)
 {
 	int test_fail_flag = 0;
 	printf("Running the test...\n");
-	char *test_str[] = {"", "a", "hello", "abcdefghijklmnopqrstuvwxyz", "hello world", "hello\0world", "hello café"};
+	char *test_str[] = {"", "a", "hello", "abcdefghijklmnopqrstuvwxyz",\
+   	"hello world", "hello\0world", "hello café"};
 	for (int i = 0; i < 7; i++)
 	{
 		int got = ft_strlen(test_str[i]);
@@ -46,3 +58,4 @@ int main (void)
 
 	return (0);
 }
+*/

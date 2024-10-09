@@ -1,4 +1,16 @@
-int ft_strlcpy(char *dst, const char *str, int size)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 11:58:11 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 11:59:12 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_strlcpy(char *dst, const char *str, int size)
 {
 	int	count;
 
@@ -23,7 +35,7 @@ int ft_strlcpy(char *dst, const char *str, int size)
 	}
 	return (count);
 }
-
+/*
 //Start of the Test
 #include <stdio.h>
 #include <string.h>
@@ -58,3 +70,4 @@ int main (void)
 
 	return (0);
 }
+*/

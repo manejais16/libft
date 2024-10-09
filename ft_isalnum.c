@@ -1,14 +1,27 @@
-int ft_isalnum(int ch)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 11:21:28 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 11:23:28 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isalnum(int ch)
 {
 	if (ch >= '0' && ch <= '9')
 		return (4);
-	if (ch >= 65 && ch <= 90) 
+	if (ch >= 65 && ch <= 90)
 		return (1);
 	if (ch >= 97 && ch <= 122)
 		return (2);
 	return (0);
 }
 
+/*
 //Start of the test
 #include <ctype.h>
 #include <stdio.h>
@@ -37,3 +50,4 @@ int main(void)
 
 	return (0);
 }
+*/

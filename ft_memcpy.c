@@ -1,7 +1,18 @@
-#include <stdio.h>
-void *ft_memcpy(void *to, const void *from, int numBytes)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 11:52:54 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 11:55:00 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	*ft_memcpy(void *to, const void *from, int numBytes)
 {
-	void *temp;
+	void	*temp;
 
 	temp = to;
 	while (numBytes > 0)
@@ -13,12 +24,10 @@ void *ft_memcpy(void *to, const void *from, int numBytes)
 	}
 	return (temp);
 }
-
-
+/*
 //Start of the Test
 #include <stdio.h>
 #include <string.h>
-
 
 int main (void)
 {
@@ -26,7 +35,8 @@ int main (void)
 	printf("Running the test...\n");
 	char to[] = "This is just a test sentence...";
 	char to2[] = "This is just a test sentence...";
-	char *from[] = {"someasdfl", "asdf", "asfwerewaksjdflkjlkadsjfue", "asdfasdf", "treuo", "utoewut", "ouosdfpo"};
+	char *from[] = {"someasdfl", "asdf", "asfwerewaksjdflkjlkadsjfue",\
+	"asdfasdf", "treuo", "utoewut", "ouosdfpo"};
 	int len[] = {5, 0, 26, 5, 5, 9, 0};
 	for (int i = 0; i < 7; i++)
 	{
@@ -49,3 +59,4 @@ int main (void)
 
 	return (0);
 }
+*/

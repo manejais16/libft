@@ -1,12 +1,24 @@
-int ft_isalpha(int ch)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/08 11:08:33 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 11:17:51 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isalpha(int ch)
 {
 	if (ch >= 65 && ch <= 90)
 		return (1);
-	if(ch >= 97 && ch <= 122)
+	if (ch >= 97 && ch <= 122)
 		return (2);
 	return (0);
 }
-
+/*
 //Start of the test
 #include <ctype.h>
 #include <stdio.h>
@@ -35,3 +47,4 @@ int main(void)
 
 	return (0);
 }
+*/

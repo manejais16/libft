@@ -1,4 +1,16 @@
-int ft_tolower(int ch)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 12:04:31 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 12:04:33 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_tolower(int ch)
 {
 	if (ch >= 65 && ch <= 90)
 	{
@@ -6,7 +18,7 @@ int ft_tolower(int ch)
 	}
 	return (ch);
 }
-
+/*
 //Start of the test
 //The test checks only unsigned char range from 0 - 127
 #include <ctype.h>
@@ -36,3 +48,4 @@ int main(void)
 
 	return (0);
 }
+*/

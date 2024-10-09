@@ -1,12 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 12:53:58 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 13:14:27 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #define MAX_INT 2147483647
 #define MIN_INT -2147483648
 
-int isspace (int ch);
+static int	isspace(int ch);
+static void	calculate_num(int *result, const char *str, char *num_negat_flag);
 
-int ft_atoi (const char *str)
+int	ft_atoi(const char *str)
 {
-	char 	num_negat_flag;
-	int	result;
+	char	num_negat_flag;
+	int		result;
 
 	num_negat_flag = 0;
 	result = 0;
@@ -20,28 +33,40 @@ int ft_atoi (const char *str)
 			num_negat_flag = 1;
 		str++;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		if (!num_negat_flag)
-			result = result * 10 + (*str - '0');
-		else
-			result = result * 10 - (*str - '0');
-		if (!num_negat_flag && result < 0)
-			return (MAX_INT);
-		if (num_negat_flag && result > 0)
-			return (MIN_INT);
-		*str++;
-	}
+	calculate_num(&result, str, &num_negat_flag);
 	return (result);
 }
 
-int isspace (int ch)
+static int	isspace(int ch)
 {
-	if (ch == ' ' || ch == '\f' || ch == '\n' || ch == '\r' ||  ch == '\t' || ch == '\v')
+	if (ch == ' ' || ch == '\f' || ch == '\n' || \
+		ch == '\r' || ch == '\t' || ch == '\v')
 		return (1);
 	return (0);
 }
 
+static void	calculate_num(int *result, const char *str, char *num_negat_flag)
+{
+	while (*str >= '0' && *str <= '9')
+	{
+		if (!(*num_negat_flag))
+			*result = *result * 10 + (*str - '0');
+		else
+			*result = *result * 10 - (*str - '0');
+		if (!(*num_negat_flag) && *result < 0)
+		{
+			*result = MIN_INT;
+			break ;
+		}
+		if (*num_negat_flag && *result > 0)
+		{
+			*result = MAX_INT;
+			break ;
+		}
+		str++;
+	}
+}
+/*
 //Start of the Test
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,8 +75,9 @@ int main (void)
 {
 	int test_fail_flag = 0;
 	printf("Running the test...\n");
-	char* test_in[] = {"123", "-456", "   789", "123abc", "", "hello", "2147483648", "-2147483649", 0, "-2147463648"};
-	for (int i = 0; i < 10; i++)
+	char* test_in[] = {"123", "-456", "   789", "123abc",\
+   	"", "hello", "2147483648", "-2147483649", "-2147463648"};
+	for (int i = 0; i < 9; i++)
 	{
 		int got = ft_atoi(test_in[i]);
 		int expected = atoi(test_in[i]); 
@@ -72,3 +98,4 @@ int main (void)
 
 	return (0);
 }
+*/

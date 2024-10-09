@@ -1,11 +1,22 @@
-char *ft_strrchr(const char *str, int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 12:09:44 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/09 12:11:16 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strrchr(const char *str, int c)
 {
 	char	*temp;
-	
+
 	temp = 0;
 	if (str == 0)
 		return (0);
-
 	while (*str != '\0')
 	{
 		if (*str == c)
@@ -15,9 +26,8 @@ char *ft_strrchr(const char *str, int c)
 	if (c == '\0')
 		return ((char *)str);
 	return (temp);
-
 }
-
+/*
 //Start of the Test
 #include <stdio.h>
 #include <string.h>
@@ -26,7 +36,8 @@ int main (void)
 {
 	int test_fail_flag = 0;
 	printf("Running the test...\n");
-	char *test_str[] = {"Test 1", "Test 2", "Test 3", "TesT 4", "", "Test 6", "Test 7"};
+	char *test_str[] = {"Test 1", "Test 2", "Test 3",\
+   	"TesT 4", "", "Test 6", "Test 7"};
 	char test_char[] = {'1', 'e', 'x', 'T', 'a', 0, '\0'};
 	for (int i = 0; i < 7; i++)
 	{
@@ -49,3 +60,4 @@ int main (void)
 
 	return (0);
 }
+*/
