@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:16:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 13:53:18 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/11 20:45:26 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,16 +27,16 @@ char	*ft_memchr(const void *str, int c, unsigned int n)
 		return (0);
 	return ((void *)str);
 }
-//#include <stdio.h>
-//
-//int main (void)
-//{
-//	char	*ptr;
-//
-//	ptr = ft_memchr(":(){ :|: & };:", '\xde',15);
-//	printf("The result: %p", ptr);
-//	return (0);
-//}
+#include <stdio.h>
+
+int main (void)
+{
+	char	*ptr;
+
+	ptr = ft_memchr(":(){ :|: & };:", '\xde',15);
+	printf("The result: %p", ptr);
+	return (0);
+}
 /*
 //Start of the Test
 #include <stdio.h>
