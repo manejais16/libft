@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:05:12 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 09:35:32 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/11 16:14:43 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ int		ft_toupper(int ch);
 int		ft_tolower(int ch);
 char	*ft_strchr(const char *str, int search_str);
 char	*ft_strrchr(const char *str, int c);
-int		ft_strncmp(const char *str1, const char *str2, int num);
-char	*ft_memchr(const void *str, int c, int n);
-int		ft_memcmp(const char *str1, const char *str2, int num);
-char	*ft_strnstr(const char *big, const char *little, int len);
+int		ft_strncmp(const char *str1, const char *str2, unsigned int num);
+char	*ft_memchr(const void *str, int c, unsigned int n);
+int		ft_memcmp(const void *str1, const void *str2, int num);
+char	*ft_strnstr(const char *heystack, const char *needle, unsigned int len);
 int		ft_atoi(const char *str);
+void	*ft_calloc(int nitems, int size);
 #endif

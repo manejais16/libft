@@ -6,63 +6,57 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:32:31 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 18:21:20 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/11 16:00:22 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static char		*ft_strchrx(const char *str, int search_str, int *len_left);
-static int		ft_strcmpx(const char *str1, const char *str2);
+int	ft_strcmp(const char *str1, const char *str2, int len);
 
-char	*ft_strnstr(const char *big, const char *little, int len)
+char	*ft_strnstr(const char *heystack, const char *needle, unsigned int len)
 {
-	char	*last_first_char_found;
-
-	if (len == 0)
-		return (0);
-	if (*little == '\0')
-		return ((char *) big);
-	last_first_char_found = ft_strchrx(big, *little, &len);
-	while (last_first_char_found && len > 0)
+	if (*needle == '\0')
+		return ((char *)heystack);
+	while (*heystack && len > 0)
 	{
-		if (ft_strcmpx(last_first_char_found, little) == 0)
-			return (last_first_char_found);
-		big++;
-		last_first_char_found = ft_strchrx(big, *little, &len);
+		if (ft_strcmp(heystack, needle, len) == 0)
+			return ((char *)heystack);
+		heystack++;
+		len--;
 	}
 	return (0);
 }
 
-static char	*ft_strchrx(const char *str, int search_str, int *len_left)
+int	ft_strcmp(const char *str1, const char *str2, int len)
 {
-	if (str == 0)
-		return (0);
-	while (*str != '\0' && *str != search_str)
-	{
-		str++;
-		(*len_left)--;
-	}
-	if (*str == '\0' && search_str != '\0')
-		return (0);
-	return ((char *)str);
-}
-
-static int	ft_strcmpx(const char *str1, const char *str2)
-{
-	while (*str1 != '\0' && *str2 != '\0')
+	while (*str1 && *str2 && len > 0)
 	{
 		if (*str1 != *str2)
 			break ;
 		str1++;
 		str2++;
+		len--;
 	}
-	if (*str1 == *str2 || *str2 == '\0')
+	if (!*str2)
 		return (0);
-	if (*str1 > *str2)
+	if (len == 0)
 		return (1);
-	else
-		return (-1);
+	return (*(unsigned char *) str1 - *(unsigned char *) str2);
 }
+//#include <stdio.h>
+//
+//int	main(void)
+//{
+//	printf("%s", ft_strnstr("Some kind of test text.", "test", -1));
+//	return (0);
+//}
+//#include <stdio.h>
+//int	main(void)
+//{
+//
+//	printf("%s", ft_strnstr("lorem ipsum dolor sit amet", "dol", 30));
+//	return (0);
+//}
 /*
 //Start of the Test
 #include <stdio.h>

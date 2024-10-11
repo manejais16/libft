@@ -6,23 +6,30 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:54:09 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/08 11:03:26 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/11 17:00:05 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(int nitems, int size)
 {
-	void		*ptr;
+	void	*ptr;
+	int		temp;
 
 	ptr = (void *)malloc(nitems * size);
 	if (!ptr)
 		return (0);
-	while (size)
+	while (nitems)
 	{
-		*((char *) ptr + (size - 1)) = 0;
-		size--;
+		temp = 0;
+		while (temp < size)
+		{
+			*(char *)(ptr + nitems * size - temp - 1) = 0;
+			temp++;
+		}
+		nitems--;
 	}
 	return (ptr);
 }

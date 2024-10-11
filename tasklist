@@ -15,13 +15,13 @@
 [x] ft_tolower.c
 [x] ft_strchr.c
 [x] ft_strrchr.c
-[ ] ft_strncmp.c
-[ ] ft_memchr.c !!!! 
-[ ] ft_memcmp.c
-[ ] ft_strnstr.c ! Improvements needed
+[x] ft_strncmp.c
+[ ] ft_memchr.c DONT't know why the test crashes even if the main test does not!
+[x] ft_memcmp.c
+[ ] ft_strnstr.c DONT't know what to to with negative len!!!! 
 [x] ft_atoi.c
 
-[ ] ft_calloc.c
+[x] ft_calloc.c
 [ ] ft_strdup.c
 
 [ ] ft_substr.c
