@@ -1,7 +1,20 @@
-#ifndef LIBFT_H
-#define LIBFT_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/10 14:05:12 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/11 09:35:32 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include "libft.h"
+
 int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
 int		ft_isalnum(int ch);
@@ -12,7 +25,8 @@ void	*ft_memset(void *str, int c, int n);
 void	*ft_bzero(void *str, int n);
 void	*ft_memcpy(void *to, const void *from, int numBytes);
 void	*ft_memmove(void *to, const void *from, int numBytes);
-int		ft_strlcat(char *dst, const char *str, int size);
+int		ft_strlcpy(char *dst, const char *str, int size);
+int		ft_strlcat(char *dst, const char *str, unsigned int size);
 int		ft_toupper(int ch);
 int		ft_tolower(int ch);
 char	*ft_strchr(const char *str, int search_str);

@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:09:44 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 17:38:26 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/10 19:12:18 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,8 +16,7 @@ char	*ft_strrchr(const char *str, int c)
 	char	*temp;
 
 	temp = 0;
-	if (str == 0)
-		return (0);
+	c = c % 128;
 	while (*str != '\0')
 	{
 		if (*str == c)

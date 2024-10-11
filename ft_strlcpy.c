@@ -6,18 +6,16 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:58:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 18:36:18 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/11 09:32:34 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlcpy(char *dst, const char *str, int size)
+int	ft_strlcpy(char *dst, const char *str, unsigned int size)
 {
 	int	count;
 
 	count = 0;
-	if (size == 0)
-		return (0);
-	if (str == 0)
+	if (str == 0 && size <= 0)
 		return (0);
 	while (size > 1 && *str != '\0')
 	{
@@ -27,12 +25,13 @@ int	ft_strlcpy(char *dst, const char *str, int size)
 		str++;
 		dst++;
 	}
-	*dst = '\0';
 	while (*str)
 	{
 		count++;
 		str++;
 	}
+	if (size > 0)
+		*dst = '\0';
 	return (count);
 }
 /*

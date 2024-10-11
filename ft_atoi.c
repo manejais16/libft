@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:53:58 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 18:12:49 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/10 18:37:47 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,8 +24,6 @@ int	ft_atoi(const char *str)
 
 	num_negat_flag = 0;
 	result = 0;
-	if (str == 0)
-		return (0);
 	while (isspace(*str))
 		str++;
 	if (*str == '-' || *str == '+')

@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:52:54 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 17:28:38 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:21:03 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *to, const void *from, int numBytes)
 	char		*to_temp;
 	const char	*from_temp;
 
+	if (from == 0 && to == 0)
+		return (to);
 	to_temp = to;
 	from_temp = from;
 	while (numBytes > 0)

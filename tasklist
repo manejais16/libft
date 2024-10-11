@@ -1,4 +1,4 @@
-[x] ft_isalpha.c
+[x] ft_isalpha.c 
 [x] ft_isdigit.c
 [x] ft_isalnum.c
 [x] ft_isascii.c
@@ -6,7 +6,7 @@
 [x] ft_strlen.c > The string.h funcion crushes with NULL ptr.
 [x] ft_memset.c > !!!!May have a error becaues the lvalue caseted and assigned and assigned at the same line.
 [x] ft_bzero.c > !!!!A test must be written for it.
-[x] ft_memcpy.c > !!!!A test must be written for it & my undefined behaviour is not == to string.h undefined.
+[x] ft_memcpy.c > NOT THERE
 [x] ft_memmove.c > !!!!More tests should be added 
 [x] ft_strlcpy.c > More tests should be added
 [x] ft_strlcat.c > !!!! More tests should be added
@@ -15,10 +15,10 @@
 [x] ft_tolower.c
 [x] ft_strchr.c
 [x] ft_strrchr.c
-[x] ft_strncmp.c
-[x] ft_memchr.c !!!! 
-[x] ft_memcmp.c
-[x] ft_strnstr.c ! Improvements needed
+[ ] ft_strncmp.c
+[ ] ft_memchr.c !!!! 
+[ ] ft_memcmp.c
+[ ] ft_strnstr.c ! Improvements needed
 [x] ft_atoi.c
 
 [ ] ft_calloc.c

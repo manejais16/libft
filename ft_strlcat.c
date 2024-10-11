@@ -6,74 +6,47 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:02:02 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 17:34:30 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/11 10:23:54 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strlcat(char *dst, const char *str, int size)
-{
-	int	count;
+void	append_dst(char **dst, const char **str, \
+		unsigned int *size, int *counter);
 
-	count = 0;
-	while (*dst)
+int	ft_strlcat(char *dst, const char *str, unsigned int size)
+{
+	int	counter;
+
+	counter = 0;
+	if (size == 0 && *str == '\0')
+		return (0);
+	while (*dst != '\0' && size > 0)
 	{
-		count++;
-		dst++;
-	}
-	if (size == 0)
-		return (count);
-	while (size > 1 && *str != '\0')
-	{
-		*dst = *str;
 		size--;
-		count++;
-		str++;
 		dst++;
+		counter++;
 	}
-	*dst = '\0';
-	while (*str)
+	append_dst(&dst, &str, &size, &counter);
+	if (size >= 1)
+		*dst = '\0';
+	while (*str != '\0')
 	{
-		count++;
 		str++;
+		counter++;
 	}
-	return (count);
+	return (counter);
 }
-/*
-//Start of the Test
-#include <stdio.h>
-#include <string.h>
 
-int main (void)
+void	append_dst(char **dst, const char **str, \
+		unsigned int *size, int *counter)
 {
-	int test_fail_flag = 0;
-	char test_dest1[][30] = {"hello", "hello", "", "hello", "hello", "hello"};
-	char test_str[][30] = {" world", " world is great", "hello",\
-	" world", "a", " world"};
-   	int test_size[] = {10, 5, 10, 10, 3, 6};
-	char* test_expected[] = {"hello world", "hello wor", "hello",\
-   	"hello world", "helloa", "hello worl"};
-	int test_expected_size[] = {11, 20, 5, 11, 6, 11};
-	printf("Running the test...\n");
-	for (int i = 0; i < 6; i++)
+	while (**str != '\0' && *size > 1)
 	{
-		int got = ft_strlcat(test_dest1[i], test_str[i], test_size[i]);
-		int expected = test_expected_size[i]; 
-		if (got == expected && !strcmp(test_dest1[i], test_expected[i]))
-			printf("Test passed : ");
-		else
-		{
-			printf("Test failed : ");
-			test_fail_flag = 1;
-		}
-		printf("Expected \"%i\", got \"%i\"\n", expected, got);
+		**dst = **str;
+		*size = *size - 1;
+		*dst = *dst + 1;
+		*str = *str + 1;
+		*counter = *counter + 1;
 	}
-
-	if (test_fail_flag == 1)
-		printf("TEST FAILED!");
-	else
-		printf("TEST PASSED!");
-
-	return (0);
 }
-*/

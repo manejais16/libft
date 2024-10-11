@@ -6,14 +6,16 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:27:42 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 17:41:21 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/10 18:16:55 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_memcmp(const char *str1, const char *str2, int num)
 {
-	while (num > 0)
+	if (num == 0)
+		return (0);
+	while (num > 1)
 	{
 		if (*str1 != *str2)
 			break ;

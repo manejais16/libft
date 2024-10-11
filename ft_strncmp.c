@@ -6,13 +6,15 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:15:02 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 17:39:25 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/10 19:32:34 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, int num)
 {
+	if (num == 0)
+		return (0);
 	while (num > 0 && *str1 != '\0' && *str2 != '\0')
 	{
 		if (*str1 != *str2)
@@ -21,6 +23,8 @@ int	ft_strncmp(const char *str1, const char *str2, int num)
 		str1++;
 		str2++;
 	}
+	str1--;
+	str2--;
 	if (*str1 == *str2)
 		return (0);
 	if (*str1 > *str2)
