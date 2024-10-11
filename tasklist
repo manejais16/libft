@@ -22,7 +22,7 @@
 [x] ft_atoi.c
 
 [x] ft_calloc.c
-[ ] ft_strdup.c
+[x] ft_strdup.c
 
 [ ] ft_substr.c
 [ ] ft_strjoin.c

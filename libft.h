@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:05:12 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 16:14:43 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/11 17:27:40 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ int		ft_memcmp(const void *str1, const void *str2, int num);
 char	*ft_strnstr(const char *heystack, const char *needle, unsigned int len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(int nitems, int size);
+char	*ft_strdup(const char *s1);
 #endif
