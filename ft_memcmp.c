@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:27:42 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 14:03:49 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 21:04:49 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, int num)
+int	ft_memcmp(const void *str1, const void *str2, size_t num)
 {
 	if (num == 0)
 		return (0);

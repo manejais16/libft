@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:15:02 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 13:28:09 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 20:39:28 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, unsigned int num)
+int	ft_strncmp(const char *str1, const char *str2, size_t num)
 {
 	if (num <= 0)
 		return (0);

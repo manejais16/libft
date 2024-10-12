@@ -1,50 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 17:06:40 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 21:12:59 by kzarins          ###   ########.fr       */
+/*   Created: 2024/10/12 21:41:19 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/12 21:43:50 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-size_t		ft_strlen(const char *str);
-static void	ft_strcpy(char *dst, const char *str);
+static char	*ft_strcpy_wo_null(char *dst, const char *str);
 
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len;
-	char	*ptr_ret;
+	char	*result;
+	char	*loc;
 
 	len = ft_strlen(s1);
-	ptr_ret = (char *) malloc(len + 1);
-	if (!ptr_ret)
+	len += ft_strlen(s2);
+	result = malloc(len + 1);
+	if (!result)
 		return (0);
-	ft_strcpy(ptr_ret, s1);
-	return ((void *)ptr_ret);
-}	
+	loc = result;
+	loc = ft_strcpy_wo_null(loc, s1);
+	loc = ft_strcpy_wo_null(loc, s2);
+	*loc = '\0';
+	return (result);
+}
 
-static void	ft_strcpy(char *dst, const char *str)
+static char	*ft_strcpy_wo_null(char *dst, const char *str)
 {
-	while (*str != '\0')
+	while (*str != '\0') 
 	{
 		*dst = *str;
 		str++;
 		dst++;
 	}
-	*dst = '\0';
+	return (dst);
 }
-//#include <stdio.h>
-//int	main(void)
-//{
-//	char	*ptr;
-//
-//	ptr = ft_strdup("Something");
-//	printf("%s", ptr);
-//	return (0);
-//}

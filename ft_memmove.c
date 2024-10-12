@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:55:34 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 17:32:08 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 20:56:13 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memmove(void *to, const void *from, int numBytes)
+void	*ft_memmove(void *to, const void *from, size_t numBytes)
 {
 	char		*to_temp;
 	const char	*from_temp;

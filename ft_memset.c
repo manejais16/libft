@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:47:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 18:18:50 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 20:51:52 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, int n)
+void	*ft_memset(void *str, int c, size_t n)
 {
 	char	*str_temp;
 

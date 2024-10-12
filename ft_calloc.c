@@ -6,18 +6,17 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:54:09 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 17:05:06 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 21:10:53 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	*ft_calloc(int nitems, int size)
+void	*ft_calloc(int nitems, size_t size)
 {
 	void	*ptr;
-	int		temp;
-
+	size_t	temp;
 	ptr = (void *)malloc(nitems * size);
 	if (!ptr)
 		return (0);

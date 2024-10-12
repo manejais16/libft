@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:27:49 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 21:52:06 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 21:16:32 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	len_s;
 	char	*result;
 
-	if (ft_strlen(s) <(int)len)
-		return (0);
+	if (ft_strlen(s) < start)
+	{
+		result = (char *) malloc(1);
+		*result = '\0';
+		return (result);
+	}
 	len_s = ft_strlen(s + start);
 	len_s++;
 	if (len_s > len)

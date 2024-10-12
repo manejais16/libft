@@ -6,11 +6,13 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:58:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/11 09:32:34 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 21:08:38 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlcpy(char *dst, const char *str, unsigned int size)
+#include "libft.h"
+
+int	ft_strlcpy(char *dst, const char *str, size_t size)
 {
 	int	count;
 

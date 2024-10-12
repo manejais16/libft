@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:52:54 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/10 10:21:03 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 21:07:42 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memcpy(void *to, const void *from, int numBytes)
+void	*ft_memcpy(void *to, const void *from, size_t numBytes)
 {
 	char		*to_temp;
 	const char	*from_temp;

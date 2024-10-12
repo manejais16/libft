@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:50:54 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/09 17:27:37 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/12 20:54:35 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_bzero(void *str, int n)
+void	*ft_bzero(void *str, size_t n)
 {
 	char	*str_temp;
 
