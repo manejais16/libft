@@ -1,82 +1,99 @@
 #include "libft.h"
-
-static int	count_delim(char const *s, char c);
-static char	**split_in_words(char **result, const char *s, char c);
-static int	add_word(char **result, int current_w_index, const char **s, char c);
-static void	free_memory(char **result, int current_w_index);
+//The add word and add end term have to free all the mem if failed.
+static int	word_count_f(const char *s, char delim);
+static int	count_word_char(const char *s, char del);
+static int	add_word(char **result, const char **s, char c, int current_word);
+static void	free_memory(char **result, int current_word);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
+	int	word_count;
+	int	current_word;
 
-	if (!*s)
-		return (0);
-	result = (char **) malloc(count_delim(s, c) + 2);
+	word_count = word_count_f(s, c);
+	current_word = 0;
+	result = (char **) malloc(word_count + 1);
 	if (!result)
 		return (0);
-	//call of the split function
-	if (!split_in_words(result, s, c))
+	while (current_word < word_count)
 	{
-		free(result);
-		return (0);
+	if (!add_word(result, &s, c, current_word))
+		return (0);	
+	current_word++;
 	}
+	*(result + current_word) = (char *) malloc(1);
+	if (*(result + current_word) == 0)
+		return (0);
+	*(*(result + current_word)) = '\0';
 	return (result);
 }
-
-static int	count_delim(char const *s, char c)
+//Works!!!!
+static int	word_count_f(const char *s, char delim)
 {
-	int	del_count;
+	char	in_word;
+	int	word_count;
 
-	del_count = 0;
+	if (!s)
+		return (0);
+	in_word = 0;
+	word_count = 0;
 	while (*s)
 	{
-		if (*s == c)
-			del_count++;
+		if (*s != delim && !in_word)
+		{
+				in_word = 1;
+				word_count++;
+		}
+		else if (*s == delim && in_word)
+			in_word = 0;
 		s++;
 	}
+	return (word_count);
 }
-//The function returns 0 if the allocation fails
-static char	**split_in_words(char **result, const char *s, char c)
-{
-	int	current_w_index;
 
-	current_w_index = 0;
-	while (*s)
+static int	count_word_char(const char *s, char del)
+{
+	int	char_count;
+
+	char_count = 0;
+	while (*s == del)
+		s++;
+	while (*s != del && *s)
 	{
-		if (!add_word(result, current_w_index, &s, c))
-		{
-			free_memory(result, current_w_index);
-			return (0);	
-		}
-		current_w_index++;
+		char_count++;
+		s++;
 	}
-	return (result);
+	return (char_count);
 }
-//This function allocats new memory space and assignes the new word to it.
-static int	add_word(char **result, int current_w_index, const char **s, char c)
-{
-	unsigned int	word_len;
 
-	if (current_w_index)
-		*s = *s + 1;
-	if (ft_strchr(*s, c))
-		word_len = ft_strchr(*s, c) - *s;
-	else
-		word_len = ft_strlen(*s);
-	*(result + current_w_index) = (char *) malloc(word_len + 1);
-	if (!*(result + current_w_index))
+
+static int	add_word(char **result, const char **s, char c, int current_word)
+{
+	int	word_char_c;
+
+	word_char_c = count_word_char(*s, c);
+	*(result + current_word) = (char *) malloc(word_char_c + 1);
+	if (*(result + current_word) == 0)
 		return (0);
-	strlcpy(*(result + current_w_index), *s, word_len + 1);
-	*s = *s + word_len;
+	while (**s == c)
+		*s = *s + 1;
+	ft_strlcpy(*(result + current_word), *s, word_char_c + 1);
 	return (1);
-}
-	
-//This function will release all the word allocations
-static void	free_memory(char **result, int current_w_index)
+}	
+
+static void	free_memory(char **result, int current_word)
 {
-	while (current_w_index >= 0)
+	while (current_word >= 0)
 	{
-		free(*(result + current_w_index));
-		current_w_index--;
+		free(*(result + current_word));
+		current_word--;
 	}
+	free(result);
+}
+#include <stdio.h>
+int	main(void)
+{
+	printf("%i", word_count_f("Some times it sucks", ' '));
+	return (0);
 }
