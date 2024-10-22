@@ -6,11 +6,10 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:54:09 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 21:10:53 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:05:50 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(int nitems, size_t size)

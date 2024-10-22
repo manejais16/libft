@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:27:49 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 21:16:32 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:13:37 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (result);
 	}
 	len_s = ft_strlen(s + start);
-	len_s++;
 	if (len_s > len)
-		len_s = len + 1;
+		len_s = len;
+	len_s++;
 	result = (char *) malloc(len_s);
 	if (!result)
 		return (0);
-	ft_strlcpy(result, s + start,len_s);
+	ft_strlcpy(result, s + start, len_s);
 	return (result);
 }

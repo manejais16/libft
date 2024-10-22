@@ -13,12 +13,12 @@
 
 [x] ft_toupper.c
 [x] ft_tolower.c
-[x] ft_strchr.c
+[x] ft_strchr.c // LAST CHECK
 [x] ft_strrchr.c
 [x] ft_strncmp.c
 [ ] ft_memchr.c DONT't know why the test crashes even if the main test does not!
 [x] ft_memcmp.c
-[ ] ft_strnstr.c DONT't know what to to with negative len!!!! 
+[x] ft_strnstr.c DONT't know what to to with negative len!!!! 
 [x] ft_atoi.c
 
 [x] ft_calloc.c
@@ -26,15 +26,15 @@
 
 [x] ft_substr.c
 [x] ft_strjoin.c
-[ ] ft_strtrim.c
-[ ] ft_split.c
-[ ] ft_itoa.c
-[ ] ft_strmapi.c
-[ ] ft_striteri.c
-[ ] ft_putchar_fd.c
-[ ] ft_putstr_fd.c
-[ ] ft_putendl_fd.c
-[ ] ft_putnbr_fd.c
+[x] ft_strtrim.c
+[x] ft_split.c
+[x] ft_itoa.c
+[x] ft_strmapi.c
+[x] ft_striteri.c
+[x] ft_putchar_fd.c
+[x] ft_putstr_fd.c
+[x] ft_putendl_fd.c
+[x] ft_putnbr_fd.c
 
 Bonus:
 [ ] ft_lstnew.c

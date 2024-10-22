@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:16:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 21:03:52 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 14:55:01 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,15 +27,6 @@ char	*ft_memchr(const void *str, int c, size_t n)
 		return (0);
 	return ((void *)str);
 }
-//#include <stdio.h>
-//int main (void)
-//{
-//	char	*ptr;
-//
-//	ptr = ft_memchr(":(){ :|: & };:", '\xde',15);
-//	printf("The result: %p", ptr);
-//	return (0);
-//}
 /*
 //Start of the Test
 #include <stdio.h>
@@ -70,5 +61,17 @@ int main (void)
 		printf("TEST PASSED!");
 
 	return (0);
+}
+//Second test that fails on francinette but does not fail no my PC
+#include <stdio.h>
+int	main(void)
+{
+	char	*str;
+	char	*result;
+	int		size = 15;
+	str = (char *)malloc(size);
+	ft_strlcpy(str, ":(){ :|: & };:", 15);
+	result = ft_memchr(str, '\xde', size);
+	printf("%p", result);
 }
 */

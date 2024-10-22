@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:02:02 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 20:59:35 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 10:56:17 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	append_dst(char **dst, const char **str, \
+static void	append_dst(char **dst, const char **str, \
 		size_t *size, int *counter);
 
 int	ft_strlcat(char *dst, const char *str, size_t size)
@@ -38,7 +38,7 @@ int	ft_strlcat(char *dst, const char *str, size_t size)
 	return (counter);
 }
 
-void	append_dst(char **dst, const char **str, \
+static void	append_dst(char **dst, const char **str, \
 		size_t *size, int *counter)
 {
 	while (**str != '\0' && *size > 1)

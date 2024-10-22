@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/22 10:34:09 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/22 10:34:53 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static char			is_in_set(char s1c, char const *set);
@@ -11,16 +23,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char		*result;
 	size_t		length;	
 
-	if (!*s1)
+	if (!s1)
 		return (0);
 	start = start_without_set(s1, set);
 	if (!start)
-		return (0);
+	{
+		result = (char *)malloc(1);
+		if (!result)
+			return (0);
+		*result = '\0';
+		return (result);
+	}
 	last = last_without_set(s1, set);
 	length = last - start + 1;
 	result = (char *)malloc(length + 1);
 	if (!result)
-		return (0)
+		return (0);
 	ft_strlcpy(result, start, length + 1);
 	return (result);
 }

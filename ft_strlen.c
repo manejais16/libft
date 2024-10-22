@@ -6,15 +6,14 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:28:16 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 20:47:14 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 10:42:02 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 // The original strlen function does not check if a 
 // NULL pointer is given and it crashes!
-// ft_strlen(NULL) == 0;
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	len;
 

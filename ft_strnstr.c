@@ -6,12 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:32:31 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 20:38:33 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 14:57:15 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strcmp(const char *str1, const char *str2, size_t len);
+static int	ft_strcmp(const char *str1, const char *str2, size_t len);
 
 char	*ft_strnstr(const char *heystack, const char *needle, size_t len)
 {
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *heystack, const char *needle, size_t len)
 	return (0);
 }
 
-int	ft_strcmp(const char *str1, const char *str2, size_t len)
+static int	ft_strcmp(const char *str1, const char *str2, size_t len)
 {
 	while (*str1 && *str2 && len > 0)
 	{

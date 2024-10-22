@@ -6,14 +6,12 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 17:06:40 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 21:12:59 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:06:38 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-size_t		ft_strlen(const char *str);
 static void	ft_strcpy(char *dst, const char *str);
 
 char	*ft_strdup(const char *s1)
