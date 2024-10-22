@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:16:11 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/22 14:55:01 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 19:34:51 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,9 +16,9 @@
 //It should teoretically have this:
 //if (c > 255)
 //	return (0);
-char	*ft_memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	while (*(char *) str != (char)c && n > 0)
+	while (*(unsigned char *) str != (unsigned char)c && n > 0)
 	{
 		n--;
 		str++;
