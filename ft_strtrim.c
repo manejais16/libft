@@ -6,14 +6,14 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:28:40 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/22 15:28:43 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 16:27:32 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*create_empty_str(void);
-static char		is_in_set(char s1c, char const *set);
+static char			*create_empty_str(void);
+static char			is_in_set(char s1c, char const *set);
 static const char	*start_without_set(char const *s1, char const *set);
 static const char	*last_without_set(char const *s1, char const *set);
 

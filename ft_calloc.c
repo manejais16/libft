@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:54:09 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/22 15:05:50 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 16:12:29 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	*ft_calloc(int nitems, size_t size)
 {
 	void	*ptr;
 	size_t	temp;
+
 	ptr = (void *)malloc(nitems * size);
 	if (!ptr)
 		return (0);

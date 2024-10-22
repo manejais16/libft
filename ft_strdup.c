@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 17:06:40 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/22 15:06:38 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 16:18:30 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s1)
 		return (0);
 	ft_strcpy(ptr_ret, s1);
 	return ((void *)ptr_ret);
-}	
+}
 
 static void	ft_strcpy(char *dst, const char *str)
 {

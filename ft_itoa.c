@@ -1,7 +1,15 @@
-// A function returns a string that represents an int
-// Negative integares must be handled.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/22 16:13:04 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/22 16:46:58 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static char	get_space_qty(int n);
@@ -31,7 +39,7 @@ char	*ft_itoa(int n)
 static char	get_space_qty(int n)
 {
 	char	digits;
-	
+
 	digits = 0;
 	while (n)
 	{
@@ -47,7 +55,7 @@ static char	*zero_case(char *result, int n)
 		return (0);
 	result = (char *) malloc(2);
 	if (!result)
-		return(0);
+		return (0);
 	*result = '0';
 	*(result + 1) = '\0';
 	return (result);
@@ -69,7 +77,6 @@ static void	int_to_str(char *result, char neg_flag, int n, char dig_count)
 		*(result + dig_count) = (n % 10) + '0';
 		n /= 10;
 	}
-
 }
 
 //#include <stdio.h>

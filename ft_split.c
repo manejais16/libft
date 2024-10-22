@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/22 16:18:01 by kzarins           #+#    #+#             */
+/*   Updated: 2024/10/22 16:46:03 by kzarins          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	word_count_f(const char *s, char delim);
@@ -9,8 +20,8 @@ static void	free_memory(char **result, int current_word);
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int	word_count;
-	int	current_word;
+	int		word_count;
+	int		current_word;
 
 	word_count = word_count_f(s, c);
 	current_word = 0;
@@ -20,7 +31,7 @@ char	**ft_split(char const *s, char c)
 	while (current_word < word_count)
 	{
 		if (!add_word(result, &s, c, current_word))
-			return (0);	
+			return (0);
 		current_word++;
 	}
 	*(result + current_word) = 0;
@@ -30,7 +41,7 @@ char	**ft_split(char const *s, char c)
 static int	word_count_f(const char *s, char delim)
 {
 	char	in_word;
-	int	word_count;
+	int		word_count;
 
 	if (!s)
 		return (0);

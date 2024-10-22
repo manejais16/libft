@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 21:41:19 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/12 21:43:50 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 16:19:42 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 static char	*ft_strcpy_wo_null(char *dst, const char *str)
 {
-	while (*str != '\0') 
+	while (*str != '\0')
 	{
 		*dst = *str;
 		str++;
