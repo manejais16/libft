@@ -6,7 +6,7 @@
 /*   By: kzarins <kzarins@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:27:49 by kzarins           #+#    #+#             */
-/*   Updated: 2024/10/22 15:13:37 by kzarins          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:26:50 by kzarins          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) < start)
 	{
 		result = (char *) malloc(1);
+		if (!result)
+			return (0);
 		*result = '\0';
 		return (result);
 	}
@@ -34,3 +36,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(result, s + start, len_s);
 	return (result);
 }
+//
+//#include <stdio.h>
+//int	main(void)
+//{
+//	char	*result = ft_substr("", 1, 1);
+//
+//	printf("%s", result);
+//	return (0);
+//}
